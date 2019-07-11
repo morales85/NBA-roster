@@ -8,10 +8,11 @@
     <title>NBA</title>
 </head>
 <body>
-    <div id="title">MY NBA ROSTER</div>
+    <p class="shadow text2">MY NBA ROSTER</p>
+
 <div class="input">
-    <input type="text" id="team-input" placeholder="What team do you want to check?">
-    <button onclick="getRoster()">Get Roster</button>
+    <input type="text" style="font-size:24pt" id="team-input" placeholder="Team?">
+    <button class="bttn" onclick="getRoster()">Get Roster</button>
 </div>
 
 <div class="players-container">
@@ -26,8 +27,8 @@
             {{#each player}}
             <div class="player">
                     <div class="name">{{firstName}}, {{lastName}}</div>
-                    <div class="positionJ">{{position}} - {{jersey}}</div>
                     <img class="img" src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" onerror="this.src='https://sooluciona.com/wp-content/uploads/2019/06/Cua%CC%81ntos-anillos-gano-Kareem-Abdul-Jabbar.jpg'">
+                    <div class="positionJ">{{position}} - #{{jersey}}</div>
             </div>
             {{/each}}
 
@@ -40,6 +41,5 @@
 </body>
 </html>
 
-<!-- <img class="img" src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" onerror="this.src='https://sooluciona.com/wp-content/uploads/2019/06/Cua%CC%81ntos-anillos-gano-Kareem-Abdul-Jabbar.jpg'"> -->
 
 
