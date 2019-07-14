@@ -10,3 +10,7 @@ const getRoster = function () {
     })
 }
 
+$("").on("click", ".delete", function(){
+    tweeter.removePost($(this).closest(".post").data("id")) // Tomamos postId
+   renderer.renderPosts(tweeter.getPosts())
+})

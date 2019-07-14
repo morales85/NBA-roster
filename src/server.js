@@ -15,7 +15,10 @@ const teamToIDs = {
     "heat": "1610612748",
     "suns": "1610612756",
     "raptors": "1610612761",
-    "bucks": "1610612749"
+    "bucks": "1610612749",
+    "wizards": - "1610612764",
+    "spurs": - "1610612759",
+    "rockets": - "1610612745",
 }
 
 app.get('/', function (req, res) {
@@ -31,7 +34,9 @@ app.get('/teams/:teamName', function(req, res){
                 let isActive = data.filter(d => d.isActive === true)
                 let rightTeam = isActive.filter(t => t.teamId === teamToIDs[teamName])
                 const teamActive = rightTeam.map(r => {return {firstName: r.firstName, lastName: r.lastName, jersey: r.jersey, position: r.pos}})
-
+app.put('team', function(req, res){
+    
+})
 res.send(teamActive)
     })
 }
